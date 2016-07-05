@@ -1,0 +1,36 @@
+/*
+Theme Name:     Responsive Pitch Child
+Theme URI:      http://thedetroitpartnership.org/
+Description:    Detroit Partnership customized child theme for the Pitch theme
+Author:         Chris Anderson, DP School Programs Director F15-W16
+Author URI:     
+Template:       pitch                             
+Version:        0.1.0
+*/
+
+@import url("../pitch/style.css");
+
+/* MOBILE STYLES */
+
+/* style searchform for mobile/tablet */
+
+#searchform {}
+
+
+/* TABLET STYLES */
+
+@media screen and (min-width: 600px) {
+
+}
+
+/* LAPTOP STYLES */
+
+@media screen and (min-width: 1200px) {
+
+}
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 1800px){
+
+}
