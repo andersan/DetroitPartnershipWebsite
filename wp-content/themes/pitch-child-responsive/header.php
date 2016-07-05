@@ -2,6 +2,19 @@
 	
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head>
+	<!-- detect screen size (for responsive design) -->
+	<script>
+		if (matchMedia && window.matchMedia('(min-device-width: 320px) and (max-device-width: 600px)').matches) {
+		    document.cookie = 'smartPhone=1; path=/';
+		}
+		if (matchMedia && window.matchMedia('(min-device-width: 600px) and (max-device-width: 1200px)').matches) {
+		    document.cookie = 'tablet=1; path=/';
+		}
+		if (matchMedia && window.matchMedia('(min-device-width: 1200px)').matches) {
+		    document.cookie = 'pc=1; path=/';
+		}
+		</script>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>" />
 	<title><?php wp_title('|', true, 'right'); ?></title>
 
@@ -9,6 +22,12 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 	<?php wp_head(); ?>
+
+	<!-- slicknav mobile/tablet dropdown menu -->
+	<link rel="stylesheet" type="text/css" media="screen" href="./wp-content/themes/pitch-child-responsive/slicknav.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="./wp-content/themes/pitch-child-responsive/js/jquery.slicknav.js"></script>
+	
 </head>
 
 <body <?php body_class() ?>>
