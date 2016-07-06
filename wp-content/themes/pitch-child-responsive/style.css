@@ -17,6 +17,19 @@ Version:        0.1.0
 #searchform {}
 
 
+/* center bootstrap carousel */
+.item > a > img {
+    
+    display: none;
+
+}
+
+#carousel-example-generic > div > div.item > a > img {
+	margin: 0 auto;
+    height: 500px;
+}
+
+
 /* TABLET STYLES */
 
 @media screen and (min-width: 600px) {
