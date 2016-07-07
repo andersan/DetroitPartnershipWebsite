@@ -19,14 +19,41 @@ Version:        0.1.0
 
 /* center bootstrap carousel */
 .item > a > img {
-    
-    display: none;
 
 }
 
+/* make site 'features' mobile */
+
+#call-to-action a {
+    display: inline-block;
+    position: relative;
+    margin: 20px 0px 0px 30px;
+    background: red !important;
+}
+
+#site-features > div > ul > li:nth-child(n+0){
+	width:100%;
+}
+
+#topbar {display: none;}
+
 #carousel-example-generic > div > div.item > a > img {
 	margin: 0 auto;
-    height: 500px;
+  height: 300px;
+}
+
+.navbar-header > a > img {
+	display: block;
+}
+
+.container {
+	width: 90%;
+	margin: 1% 5%;
+} 
+
+#footer .container {
+  width: 55%;
+	display: table;
 }
 
 
@@ -39,6 +66,24 @@ Version:        0.1.0
 /* LAPTOP STYLES */
 
 @media screen and (min-width: 1200px) {
+
+	#collapse_nav .nav {
+		margin-top: 20px;
+		float: right;
+	}
+
+	#carousel-example-generic > div > div.item > a > img {
+	margin: 0 auto;
+  height: 500px;
+	}
+
+	#site-features > div > ul > li:nth-child(n+0){
+	width: 33%;
+	}*/
+
+	.container {
+
+	}
 
 }
 
