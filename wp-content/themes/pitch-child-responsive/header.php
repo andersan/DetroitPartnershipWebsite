@@ -16,8 +16,8 @@
 	<!-- bootstrap mobile/tablet dropdown menu and image carousel -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<link rel="stylesheet" href="./wp-content/themes/pitch-child-responsive/css/bootstrap.min.css">
-	<script src="./wp-content/themes/pitch-child-responsive/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/wp-content/themes/pitch-child-responsive/css/bootstrap.min.css">
+	<script src="/wp-content/themes/pitch-child-responsive/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -42,19 +42,19 @@
 
 <?php if (!wp_is_mobile()) : ?>
 
-<!--<div id="logo">
+<div id="logo">
 	<div class="container">
-		<a href="<?php echo esc_url(home_url()) ?>" title="<?php echo esc_attr(get_bloginfo('name').' - '.get_bloginfo('description')); ?>" id="logo-link">
+		<!--<a href="<?php echo esc_url(home_url()) ?>" title="<?php echo esc_attr(get_bloginfo('name').' - '.get_bloginfo('description')); ?>" id="logo-link">
 			<?php if(function_exists('get_custom_header') && !empty(get_custom_header()->url)) : ?>
 				<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" title="<?php echo esc_attr(get_bloginfo('name')) ?>" alt="<?php echo esc_attr(get_bloginfo('name').' - '.get_bloginfo('description')) ?>" />
 			<?php else : ?>
 				<h1><?php echo esc_html(get_bloginfo('name')) ?></h1>
 			<?php endif; ?>
-		</a>
+		</a>-->
 		
 		<?php if(siteorigin_setting('general_search_input')) get_search_form() ?>
 	</div>
-</div>-->
+</div>
 
 <?php endif; ?>
 
@@ -65,7 +65,7 @@
 		  <div class="container-fluid">
 		    
 		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header" style="height: 100px;">
+		    <div class="navbar-header" style="height: 100px">
 		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse_nav">
 		        <span class="sr-only">Toggle navigation</span>
 		        <span class="icon-bar"></span>
@@ -90,7 +90,7 @@
 		                'depth'             => 2,
 		                'container'         => 'div',
 		                'container_class'   => 'collapse navbar-collapse',
-		        'container_id'      => 'collapse_nav',
+		        				'container_id'      => 'collapse_nav',
 		                'menu_class'        => 'nav navbar-nav',
 		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 		                'walker'            => new wp_bootstrap_navwalker())
