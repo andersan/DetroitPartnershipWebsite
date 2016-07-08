@@ -8,7 +8,8 @@ $slides = new WP_Query(array(
 	'order' => 'ASC'
 ));
 
-echo $post_count;
+
+$post_count = $slides->found_posts;
 
 if($slides->have_posts()){
 	?>
@@ -18,11 +19,10 @@ if($slides->have_posts()){
 		  <ol class="carousel-indicators">
 
 		  	<!-- TODO: DYNAMIC NUMBER OF INDICATORS DEPENDING ON # OF SLIDES -->
-		    
 		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		  </ol>
+		    <?php for ($ind = 1; $ind < $post_count; $ind++) {echo '
+		    <li data-target="#carousel-example-generic" data-slide-to="'.$ind.'"></li>';} ?>
+		    </ol>
 
 		  <!-- Wrapper for slides -->
 
@@ -43,13 +43,14 @@ if($slides->have_posts()){
 					<?php echo get_the_post_thumbnail(get_the_ID(), 'img-responsive center-block' /* the image is responsive, but still can have very variable heights... */) ?>
 					<?php if(!empty($destination)) echo '</a>' ?>
 
-		      <div class="carousel-caption" style="background: rgba(0,0,0,0.5); margin-bottom: 30px;">
+		      <div class="carousel-caption" style="" >
 		        <!-- print post title -->
 						<h3><?php the_title() ?></h3> 
 		        <p>
 							<?php the_excerpt() ?>
 		        </p>
-		        <button class="btn btn-primary"><a href=<?php echo $destination ?>>Learn more</a></button>
+		      </br>
+		        <button class="btn"><a href=<?php echo $destination ?>>Learn more</a></button>
 		      </div>
 		    </div>
 
