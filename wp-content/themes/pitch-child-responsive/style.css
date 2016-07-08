@@ -56,6 +56,23 @@ Version:        0.1.0
 	display: table;
 }
 
+
+/* remove carousel shadow */
+.carousel-control.left, .carousel-control.right{ 
+	background: none !important; 
+	filter: progid:none !important;
+}
+
+.carousel-caption {
+		background: rgba(0,0,0,0.5);
+}
+
+/* questionable... make spaces in loop at bottom*/
+div.post-list-wrapper > ul > li> a > img {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (max-width: 370px) {
 	.navbar-brand > img {
 		width: 100%;
@@ -92,8 +109,9 @@ Version:        0.1.0
 	width: 33%;
 	}*/
 
-	.container {
-
+	.carousel-caption {
+		margin-bottom: 30px; 
+		padding: 15px;
 	}
 
 }
